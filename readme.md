@@ -1,28 +1,56 @@
 # Change Detection Based on Artificial Intelligence: State-of-the-Art and Challenges
 
-## Introduction
+## 1. Introduction
  Change detection based on remote sensing (RS) data is an important method of detecting changes on the Earth’s surface and has a wide range of applications in urban planning, environmental monitoring, agriculture investigation, disaster assessment, and map revision. In recent years, integrated artificial intelligence (AI) technology has become a research focus in developing new change detection methods. Although some researchers claim that AI-based change detection approaches outperform traditional change detection approaches, it is not immediately obvious how and to what extent AI can improve the performance of change detection. This review focuses on the state-of-the-art methods, applications, and challenges of AI for change detection. Specifically, the implementation process of AI-based change detection is first introduced. Then, the data from different sensors used for change detection, including optical RS data, synthetic aperture radar (SAR) data, street view images, and combined heterogeneous data, are presented, and the available open datasets are also listed. The general frameworks of AI-based change detection methods are reviewed and analyzed systematically, and the unsupervised schemes used in AI-based change detection are further analyzed. Subsequently, the commonly used networks in AI for change detection are described. From a practical point of view, the application domains of AI-based change detection methods are classified based on their applicability. Finally, the major challenges and prospects of AI for change detection are discussed and delineated, including (a) heterogeneous big data processing, (b) unsupervised AI, and (c) the reliability of AI. This review will be beneficial for researchers in understanding this field.
- 
+
 ![](/Figure%201.png)
-Figure 1. General schematic diagram of change detection.
+<center>Figure 1. General schematic diagram of change detection.</center>
 
-<br/>
-
-![](/Figure%202.png)
-Figure 2. Implementation process of AI-based change detection (black arrows indicate workflow and red arrow indicates an example).
-
-## Implementation process
+## 2. Implementation process
 
 Figure 2 provide a general implementation process of AI-based change detection, but the structure of the AI model is diverse and needs to be well designed according to different application situations and the training data. It is worth mentioning that existing mature frameworks such as TensorFlow, Keras, Pytorch, and Caffe, help researchers more easily realize the design, training, and deployment of AI models, and their development documents provide detailed introductions.
 
-TODO
+![](/Figure%202.png)
+<center>Figure 2. Implementation process of AI-based change detection (black arrows indicate workflow and red arrow indicates an example).</center>
 
-## Open datasets
-
-Currently, there are some freely available data sets for change detection, which can be used as benchmark datasets for AI training and accuracy evaluation in future research. Detailed information is presented in Table 1.
+### 2.1 Available codes for AI-based methods
 
 <table>
-<caption>Tabel 1. A list of open datasets for change detection.<caption>
+<caption>Tabel 1. A list of available codes for AI-based change detection methods.</caption>
+	<tr>
+	    <th>Type</th>
+	    <th>Method</th>
+	    <th>Description</th>  
+	</tr>
+    <tr>
+	    <td>TODO</td>
+	    <td></td>
+	    <td></td>  
+	</tr>
+</table>
+
+### 2.2 Available codes for traditional methods
+
+<table>
+<caption>Tabel 2. A list of available codes for traditional change detection methods.</caption>
+	<tr>
+	    <th>Type</th>
+	    <th>Method</th>
+	    <th>Description</th>  
+	</tr>
+    <tr>
+	    <td>TODO</td>
+	    <td></td>
+	    <td></td>  
+	</tr>
+</table>
+
+
+## 3. Open datasets
+
+Currently, there are some freely available data sets for change detection, which can be used as benchmark datasets for AI training and accuracy evaluation in future research. Detailed information is presented in Table 3.
+<table>
+<caption>Tabel 3. A list of open datasets for change detection.</caption>
 	<tr>
 	    <th>Type</th>
 	    <th width="180px">Data set</th>
@@ -111,8 +139,21 @@ Currently, there are some freely available data sets for change detection, which
 
 It can be seen that the amount of open datasets that can be used for change detection tasks is small, and some of them have small data sizes. At present, there is still a lack of large SAR datasets that can be used for AI training. Most AI-based change detection methods are based on several SAR data sets that contain limited types of changes, e.g., the Bern dataset, the Ottawa dataset, the Yellow River dataset, and the Mexico dataset, which cannot meet the needs of change detection in areas with complex land cover and various change types. Moreover, their labels are not freely available. Street-view datasets are generally used for research of AI-based change detection methods in computer vision (CV). In CV, change detection based on pictures or video is also a hot research field, and the basic idea is consistent with that based on RS data. Therefore, in addition to street view image datasets, several video datasets in CV can also be used for research on AI-based change detection methods, such as CDNet 2012 and CDNet 2014. 
 
+## 4. Applications
+The development of AI-based change detection techniques has greatly facilitated many applications and has improved their automation and intelligence. Most AI-based change detection generates binary maps, and these studies only focus on the algorithm itself, without a specific application field. Therefore, it can be considered that they are generally suitable for LULC change detection. In this section, we focus on the techniques that are associated with specific applications, and they can be broadly divided into four categories:
+* **Urban contexts**: urban expansion, public space management, and building change detection;
+* **Resources and environment**: human-driven environmental changes, hydro-environmental changes, sea ice, surface water, and forest monitoring;
+* **Natural disasters**: landslide mapping and damage assessment;
+* **Astronomy**: planetary surfaces.
 
-## Reference
+We provide an overview of the various change detection techniques in the literature for the different application categories. The works and data types associated with these applications are listed in Table 4.
+
+<center>Table 4. Summary of main applications of AI-based change detection techniques.</center>
+
+![](/Applications.png)
+
+
+## 5. Reference
 <span id="Ref-1">[1] Hyperspectral Change Detection Dataset. Available online: https://citius.usc.es/investigacion/datasets/hyperspectral-change-detection-dataset (accessed on 4 May 2020).</span>
 
 <span id="Ref-2">[2] Wang, Q.; Yuan, Z.; Du, Q.; Li, X. GETNET: A General End-to-End 2-D CNN Framework for Hyperspectral Image Change Detection. IEEE Trans. Geosci. Remote Sens. 2018, 57, 3–13. [<a href="https://scholar.google.com/scholar_lookup?title=GETNET:+A+General+End-to-End+2-D+CNN+Framework+for+Hyperspectral+Image+Change+Detection&author=Wang,+Q.&author=Yuan,+Z.&author=Du,+Q.&author=Li,+X.&publication_year=2018&journal=IEEE+Trans.+Geosci.+Remote+Sens.&volume=57&pages=3%E2%80%9313&doi=10.1109/TGRS.2018.2849692" target="_blank">Google Scholar</a>] [<a href="https://ieeexplore.ieee.org/document/8418840/" target="_blank">CrossRef</a>]</span>
