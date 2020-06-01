@@ -47,14 +47,14 @@ Figure 2 provide a general implementation process of AI-based change detection, 
 	    <tr>
 	    <td>X-Net</td>
 	    <td>CNN; Unsupervised; Transformation; Heterogeneous; Optical RS; SAR</td>
-	    <td>Deep image translation with an affinity-based change prior for unsupervised multimodal change detection, 2020. [<a href="https://arxiv.org/abs/2001.04271" target="_blank">paper</a>]  [<a href="" target="_blank">code, dataset</a>]</td>
+	    <td>Deep image translation with an affinity-based change prior for unsupervised multimodal change detection, 2020. [<a href="https://arxiv.org/abs/2001.04271" target="_blank">paper</a>]  [<a href="https://github.com/llu025/Heterogeneous_CD/tree/master/legacy/Deep_Image_Translation" target="_blank">code, dataset</a>]</td>
         <td>Tensorflow 1.4</td>
 	</tr>
     <tr>
 	    <tr>
 	    <td>ACE-Net</td>
 	    <td>AE (Adversarial Cyclic Encoders); Unsupervised; Transformation; Heterogeneous; Optical RS; SAR</td>
-	    <td>Deep image translation with an affinity-based change prior for unsupervised multimodal change detection, 2020. [<a href="https://arxiv.org/abs/2001.04271" target="_blank">paper</a>]  [<a href="" target="_blank">code, dataset</a>]</td>
+	    <td>Deep image translation with an affinity-based change prior for unsupervised multimodal change detection, 2020. [<a href="https://arxiv.org/abs/2001.04271" target="_blank">paper</a>]  [<a href="https://github.com/llu025/Heterogeneous_CD/tree/master/legacy/Deep_Image_Translation" target="_blank">code, dataset</a>]</td>
         <td>Tensorflow 1.4</td>
 	</tr>
      <tr>
