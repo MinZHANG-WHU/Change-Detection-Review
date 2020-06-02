@@ -26,7 +26,7 @@ Figure 2 provide a general implementation process of AI-based change detection, 
      <tr>
 	    <td>Heterogeneous_CD</td>
 	    <td>AE (Code-Aligned AE); Unsupervised; Transformation; Heterogeneous; Optical RS</td>
-	    <td>Code-aligned autoencoders for unsupervised change detection in multimodal remote sensing images, CVPR, 2020. [<a href="https://arxiv.org/abs/2004.07011" target="_blank">paper</a>]  [<a href="https://github.com/llu025/Heterogeneous_CD/tree/master/Code-Aligned_Autoencoders" target="_blank">code, dataset</a>]</td>
+	    <td>Code-aligned autoencoders for unsupervised change detection in multimodal remote sensing images, arXiv, 2020. [<a href="https://arxiv.org/abs/2004.07011" target="_blank">paper</a>]  [<a href="https://github.com/llu025/Heterogeneous_CD/tree/master/Code-Aligned_Autoencoders" target="_blank">code, dataset</a>]</td>
         <td>TensorFlow 2.0</td>
 	</tr>
     <tr>
@@ -197,7 +197,7 @@ Figure 2 provide a general implementation process of AI-based change detection, 
 	</tr>
      <tr>
 	    <td>kCCA</td>
-	    <td>Canonical correlation Analysis; Cross-Sensor; Optical RS</td>
+	    <td>Canonical Correlation Analysis; Cross-Sensor; Optical RS</td>
 	    <td>Spectral alignment of multi-temporal cross-sensor images with automated kernel correlation analysis, IJPRS, 2015. [<a href="https://doi.org/10.1016/j.isprsjprs.2015.02.005" target="_blank">paper</a>]  [<a href="https://sites.google.com/site/michelevolpiresearch/codes/cross-sensor" target="_blank">code</a>]</td>
         <td>Matlab</td>
 	</tr>
