@@ -16,12 +16,24 @@ Figure 2 provide a general implementation process of AI-based change detection, 
 ### 2.1 Available codes for AI-based methods
 
 <table>
-<caption>Tabel 1. A list of available codes for AI-based change detection methods.</caption>
+<caption>Table 1. A list of available codes for AI-based change detection methods.</caption>
 	<tr>
 	    <th>Methods</th>
 	    <th>Keywords</th>
 	    <th>Publication</th>  
         <th>(Re-)Implementation</th>
+	</tr>
+	<tr>
+	    <td>CorrFusionNet</td>
+	    <td>CNN; Scene-level; Siamese;  Optical RS</td>
+	    <td> Correlation based fusion network towards multi-temporal scene classification and change detection, undergoing review.  [<a href="https://github.com/rulixiang/CorrFusionNet" target="_blank">code, pre-trained model</a>], [<a href="https://github.com/rulixiang/MtS-WH-Dataset" target="_blank">dataset</a>]</td>
+        <td>TensorFlow 1.8</td>
+	</tr>
+	<tr>
+	    <td>SSCDNet</td>
+	    <td>CNN (ResNet18); Siamese; Transfer Learning; Semantic; Streetview</td>
+	    <td>Weakly supervised silhouette-based semantic scene change detection, ICRA, 2020.  [<a href="https://arxiv.org/abs/1811.11985" target="_blank">paper</a>] [<a href="https://github.com/xdspacelab/sscdnet" target="_blank">code, dataset, pre-trained model</a>]</td>
+        <td>Pytorch+Python3.6</td>
 	</tr>
      <tr>
 	    <td>Heterogeneous_CD</td>
@@ -162,6 +174,12 @@ Figure 2 provide a general implementation process of AI-based change detection, 
 	    <td>Change detection from synthetic aperture radar images based on channel weighting-based deep cascade network, JSTARS, 2019. [<a href="https://dx.doi.org/10.1109/JSTARS.2019.2953128" target="_blank">paper</a>]  [<a href="https://github.com/summitgao/SAR_CD_DCNet" target="_blank">code, dataset</a>]</td>
         <td>Caffe</td>
 	</tr>
+	<tr>
+	    <td>ChangeNet</td>
+	    <td>CNN; Siamese; StreetView</td>
+	    <td>ChangeNet: a deep learning architecture for visual change detection, ECCV, 2018. [<a href="http://openaccess.thecvf.com/content_eccv_2018_workshops/w7/html/Varghese_ChangeNet_A_Deep_Learning_Architecture_for_Visual_Change_Detection_ECCVW_2018_paper.html" target="_blank">paper</a>]  [<a href="https://github.com/leonardoaraujosantos/ChangeNet" target="_blank">code, dataset</a>]</td>
+        <td>Pytorch</td>
+	</tr>
     <tr>
 	    <td colspan="4">Others will be added soon!</td>
     </tr>
@@ -170,7 +188,7 @@ Figure 2 provide a general implementation process of AI-based change detection, 
 ### 2.2 Available codes for traditional methods
 
 <table>
-<caption>Tabel 2. A list of available codes for traditional change detection methods.</caption>
+<caption>Table 2. A list of available codes for traditional change detection methods.</caption>
 	<tr>
 	    <th>Methods</th>
 	    <th>Keywords</th>
@@ -181,6 +199,12 @@ Figure 2 provide a general implementation process of AI-based change detection, 
 	    <td>Several Classical Methods</td>
 	    <td>CVA; DPCA; Image Differencing; Image Ratioing; Image Regression; IR-MAD; MAD; PCAkMeans; PCDA; KMeans; OTSU; Fixed Threshold</td>
 	    <td>A toolbox for remote sensing change detection. [<a href="https://github.com/Bobholamovic/ChangeDetectionToolbox" target="_blank">code</a>]</td>
+        <td>Matlab</td>
+	</tr>
+	<tr>
+	    <td>IR-MAD; IT-PCA; ERM; ICM</td>
+	    <td>Matlab toolbox change detection</td>
+	    <td>A toolbox for unsupervised change detection analysis, IJRS, 2016.[<a href="https://doi.org/10.1080/01431161.2016.1154226" target="_blank">paper</a>] [<a href="https://github.com/NicolaFalco/Matlab-toolbox-change-detection" target="_blank">code</a>]</td>
         <td>Matlab</td>
 	</tr>
     <tr>
@@ -226,6 +250,12 @@ Figure 2 provide a general implementation process of AI-based change detection, 
 images, 2015. [<a href="https://github.com/fouronnes/SAR-change-detection/blob/master/SAR_Change_Detection_Victor_Poughon.pdf" target="_blank">report</a>]  [<a href="https://github.com/fouronnes/SAR-change-detection" target="_blank">code</a>]</td>
         <td>Python</td>
 	</tr>
+	<tr>
+	    <td>PCA K-Means</td>
+	    <td>Unsupervised; DI-based; PCA; K Means; Optical RS</td>
+	    <td>Unsupervised Change Detection in Satellite Images Using Principal Component Analysis and k-Means Clustering, GRSL, 2009. [<a href="https://dx.doi.org/10.1109/LGRS.2009.2025059" target="_blank">paper</a>]  [<a href="https://github.com/rulixiang/ChangeDetectionPCAKmeans" target="_blank">re-implementation code, dataset</a>] or [<a href="https://github.com/leduckhai/Change-Detection-PCA-KMeans" target="_blank">re-implementation code</a>]</td>
+        <td>Matlab</td>
+	</tr>
     <tr>
 	    <td colspan="4">Others will be added soon!</td>
     </tr>
@@ -236,7 +266,7 @@ images, 2015. [<a href="https://github.com/fouronnes/SAR-change-detection/blob/m
 
 Currently, there are some freely available data sets for change detection, which can be used as benchmark datasets for AI training and accuracy evaluation in future research. Detailed information is presented in Table 3.
 <table>
-<caption>Tabel 3. A list of open datasets for change detection.</caption>
+<caption>Table 3. A list of open datasets for change detection.</caption>
 	<tr>
 	    <th>Type</th>
 	    <th width="180px">Data set</th>
@@ -459,7 +489,7 @@ We provide an overview of the various change detection techniques in the literat
 ## 5. Software programs
 There are currently a large number of software with change detection tools, and we have a brief summary of them, see table 5.
 <table>
-<caption>Tabel 5. A list of software for change detection.</caption>
+<caption>Table 5. A list of software for change detection.</caption>
 	<tr>
 	    <th>Type</th>
 	    <th>Name</th>
