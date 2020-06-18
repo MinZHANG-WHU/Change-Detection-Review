@@ -24,6 +24,12 @@ Figure 2 provide a general implementation process of AI-based change detection, 
         <th>(Re-)Implementation</th>
 	</tr>
 	<tr>
+	    <td>DTCDSCN</td>
+	    <td>CNN; Siamese</td>
+	    <td> Building change detection for remote sensing images using a dual task constrained deep siamese convolutional network model, undergoing review.  [<a href="https://github.com/fitzpchao/DTCDSCN" target="_blank">code, dataset</a>]</td>
+        <td>Pytorch</td>
+	</tr>
+	<tr>
 	    <td>CorrFusionNet</td>
 	    <td>CNN; Scene-level; Siamese;  Optical RS</td>
 	    <td> Correlation based fusion network towards multi-temporal scene classification and change detection, undergoing review.  [<a href="https://github.com/rulixiang/CorrFusionNet" target="_blank">code, pre-trained model</a>], [<a href="https://github.com/rulixiang/MtS-WH-Dataset" target="_blank">dataset</a>]</td>
@@ -202,8 +208,8 @@ Figure 2 provide a general implementation process of AI-based change detection, 
         <td>Matlab</td>
 	</tr>
 	<tr>
+	    <td>Matlab Toolbox Change Detection</td>
 	    <td>IR-MAD; IT-PCA; ERM; ICM</td>
-	    <td>Matlab toolbox change detection</td>
 	    <td>A toolbox for unsupervised change detection analysis, IJRS, 2016.[<a href="https://doi.org/10.1080/01431161.2016.1154226" target="_blank">paper</a>] [<a href="https://github.com/NicolaFalco/Matlab-toolbox-change-detection" target="_blank">code</a>]</td>
         <td>Matlab</td>
 	</tr>
