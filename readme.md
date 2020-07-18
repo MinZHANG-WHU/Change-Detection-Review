@@ -24,10 +24,28 @@ Figure 2 provide a general implementation process of AI-based change detection, 
         <th>(Re-)Implementation</th>
 	</tr>
 	<tr>
+	    <td>LSS-Net</td>
+	    <td>CNN (SE-ResNet50, VGG16); Optical RS</td>
+	    <td> Local similarity attention network for urban change detection on aerial images.  [<a href="https://github.com/haeyunlee/LSS-Net" target="_blank">code, dataset</a>]</td>
+        <td>Pytorch</td>
+	</tr>
+	<tr>
+	    <td>LamboiseNet</td>
+	    <td>CNN (Light UNet++); Optical RS</td>
+	    <td> Change detection in satellite imagery using deep learning, Master Thesis.  [<a href="https://github.com/hbaudhuin/LamboiseNet" target="_blank">code, dataset, pre-trained model</a>]</td>
+        <td>Pytorch</td>
+	</tr>
+	<tr>
 	    <td>DTCDSCN</td>
 	    <td>CNN; Siamese</td>
 	    <td> Building change detection for remote sensing images using a dual task constrained deep siamese convolutional network model, undergoing review.  [<a href="https://github.com/fitzpchao/DTCDSCN" target="_blank">code, dataset</a>]</td>
         <td>Pytorch</td>
+	</tr>
+	<tr>
+	    <td>Land-Cover-Analysis</td>
+	    <td>CNN (UNet); Post-Classification;  Optical RS</td>
+	    <td> Land Use/Land cover change detection in cyclone affected areas using convolutional neural networks.  [<a href="https://github.com/Kalit31/Land-Cover-Analysis/blob/master/Report.pdf" target="_blank">report</a>], [<a href="https://github.com/Kalit31/Land-Cover-Analysis" target="_blank">code, dataset, pre-trained model</a>]</td>
+        <td>TensorFlow+Keras</td>
 	</tr>
 	<tr>
 	    <td>CorrFusionNet</td>
@@ -79,6 +97,12 @@ Figure 2 provide a general implementation process of AI-based change detection, 
 	    <td>Change detection based on deep features and low rank, GRSL, 2017. [<a href="https://dx.doi.org/10.1109/LGRS.2017.2766840" target="_blank">paper</a>]  [<a href="https://github.com/MinZHANG-WHU/FDCNN/tree/master/vgg_lr" target="_blank">re-implementation code, dataset, pre-trained model</a>]</td>
         <td>Caffe+Matlab</td>
 	</tr>
+	<tr>
+	    <td>CDNet</td>
+	    <td>CNN; Siamese; Multimodal Data; Point Cloud Data</td>
+	    <td> Detecting building changes between airborne laser scanning and photogrammetric data, RS, 2019. [<a href="https://doi.org/10.3390/rs11202417" target="_blank">paper</a>], [<a href="https://github.com/Zhenchaolibrary/PointCloud2PointCloud-Change-Detection" target="_blank">code</a>]</td>
+        <td>Pytorch</td>
+	</tr>
      <tr>
 	    <td>SCCN</td>
 	    <td>AE (DAE); Unsupervised; Heterogeneous; Optical RS; SAR</td>
@@ -100,12 +124,12 @@ Figure 2 provide a general implementation process of AI-based change detection, 
     <tr>
 	    <td>UNetLSTM</td>
 	    <td>CNN (UNet); RNN (LSTM); Integrated Model; Optical RS</td>
-	    <td>Detecting Urban Changes With Recurrent Neural Networks From Multitemporal Sentinel-2 Data, IGARSS, 2019. [<a href="https://arxiv.org/abs/1910.07778" target="_blank">paper</a>]  [<a href="https://github.com/granularai/chip_segmentation_fabric" target="_blank">code, dataset, pre-trained model</a>]</td>
+	    <td>Detecting Urban Changes With Recurrent Neural Networks From Multitemporal Sentinel-2 Data, IGARSS, 2019. [<a href="https://arxiv.org/abs/1910.07778" target="_blank">paper</a>]  [<a href="https://github.com/granularai/chip_segmentation_fabric" target="_blank">code, dataset, pre-trained model</a>] and  [<a href="https://github.com/SebastianHafner/urban_change_detection" target="_blank">code</a>]</td>
         <td>Pytorch+Python3.6</td>
 	</tr><tr>
 	    <td>CDMI-Net</td>
 	    <td>CNN (Unet); Pure-Siamese; Multiple Instance Learning; Landslide Mapping; Optical RS</td>
-	    <td>Deep multiple instance learning for landslide mapping, 2020. [<a href="" target="_blank">paper</a>]  [<a href="https://github.com/MinZHANG-WHU/CDMI-Net" target="_blank">code</a>]</td>
+	    <td>Deep multiple instance learning for landslide mapping, GRSL,2020. [<a href="https://dx.doi.org/10.1109/LGRS.2020.3007183" target="_blank">paper</a>]  [<a href="https://github.com/MinZHANG-WHU/CDMI-Net" target="_blank">code, pre-trained model</a>]</td>
         <td>Pytorch+Python3.6</td>
 	</tr>
     <tr>
@@ -124,6 +148,12 @@ Figure 2 provide a general implementation process of AI-based change detection, 
 	    <td>SiameseNet</td>
 	    <td>CNN (VGG16); Pure-Siamese; Optical RS</td>
 	    <td>Siamese network with multi-level features for patch-based change detection in satellite imagery, GlobalSIP, 2018. [<a href="https://sigport.org/documents/siamese-network-multi-level-features-patch-based-change-detection-satellite-imagery" target="_blank">paper</a>]  [<a href="https://github.com/vbhavank/Siamese-neural-network-for-change-detection" target="_blank">code, dataset</a>]</td>
+        <td>TensorFlow+Keras</td>
+	</tr>
+	<tr>
+	    <td>Re3FCN</td>
+	    <td>CNN (ConvLSTM); PCA; 3D convolution; Multi-class changes; Optical RS; Hyperspectral</td>
+	    <td>Change detection in hyperspectral images using recurrent 3D fully convolutional networks, RS, 2018. [<a href="https://doi.org/10.3390/rs10111827" target="_blank">paper</a>]  [<a href="https://github.com/mkbensalah/Change-Detection-in-Hyperspectral-Images target="_blank">code, dataset</a>]</td>
         <td>TensorFlow+Keras</td>
 	</tr>
     <tr>
