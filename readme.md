@@ -24,12 +24,6 @@ Figure 2 provide a general implementation process of AI-based change detection, 
         <th>(Re-)Implementation</th>
 	</tr>
 	<tr>
-	    <td>MultiDate-LSTM</td>
-	    <td>CNN (UNet, LSTM); Optical RS</td>
-	    <td>Detecting urban changes with recurrent neural networks from multitemporal sentinel-2 data, IGRASS, 2019.  [<a href="https://github.com/granularai/fabric" target="_blank">code</a>]</td>
-        <td>Pytorch</td>
-	</tr>
-	<tr>
 	    <td>LamboiseNet</td>
 	    <td>CNN (Light UNet++); Optical RS</td>
 	    <td> Change detection in satellite imagery using deep learning, Master Thesis.  [<a href="https://github.com/hbaudhuin/LamboiseNet" target="_blank">code, dataset, pre-trained model</a>]</td>
