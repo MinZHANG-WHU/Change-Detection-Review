@@ -24,9 +24,9 @@ Figure 2 provide a general implementation process of AI-based change detection, 
         <th>(Re-)Implementation</th>
 	</tr>
 	<tr>
-	    <td>LSS-Net</td>
-	    <td>CNN (SE-ResNet50, VGG16); Optical RS</td>
-	    <td> Local similarity attention network for urban change detection on aerial images.  [<a href="https://github.com/haeyunlee/LSS-Net" target="_blank">code, dataset</a>]</td>
+	    <td>MultiDate-LSTM</td>
+	    <td>CNN (UNet, LSTM); Optical RS</td>
+	    <td>Detecting urban changes with recurrent neural networks from multitemporal sentinel-2 data, IGRASS, 2019.  [<a href="https://github.com/granularai/fabric" target="_blank">code</a>]</td>
         <td>Pytorch</td>
 	</tr>
 	<tr>
@@ -129,7 +129,7 @@ Figure 2 provide a general implementation process of AI-based change detection, 
 	</tr><tr>
 	    <td>CDMI-Net</td>
 	    <td>CNN (Unet); Pure-Siamese; Multiple Instance Learning; Landslide Mapping; Optical RS</td>
-	    <td>Deep multiple instance learning for landslide mapping, GRSL,2020. [<a href="https://dx.doi.org/10.1109/LGRS.2020.3007183" target="_blank">paper</a>]  [<a href="https://github.com/MinZHANG-WHU/CDMI-Net" target="_blank">code, pre-trained model</a>]</td>
+	    <td>Deep multiple instance learning for landslide mapping, GRSL, 2020. [<a href="https://dx.doi.org/10.1109/LGRS.2020.3007183" target="_blank">paper</a>]  [<a href="https://github.com/MinZHANG-WHU/CDMI-Net" target="_blank">code, pre-trained model</a>]</td>
         <td>Pytorch+Python3.6</td>
 	</tr>
     <tr>
@@ -309,7 +309,7 @@ Currently, there are some freely available data sets for change detection, which
 	    <th>Description</th>  
 	</tr>
 	<tr>
-	    <td rowspan="14">Optical RS</td>
+	    <td rowspan="15">Optical RS</td>
 	    <td>Hyperspectral change detection dataset [<a href="#Ref-1">1</a>] </td>
 	    <td>3 different hyperspectral scenes acquired by AVIRIS or HYPERION sensor, with 224 or 242 spectral bands, labeled 5 types of changes related with crop transitions at pixel level. [<a href="https://citius.usc.es/investigacion/datasets/hyperspectral-change-detection-dataset" target="_blank">Download</a>]</td>
 	</tr>
@@ -363,6 +363,10 @@ Currently, there are some freely available data sets for change detection, which
     <tr>
 	    <td>Bastrop fire dataset [<a href="#Ref-21">21</a>]</td>
 	    <td>4 images acquired by different sensors over the Bastrop County, Texas (USA). It is composed by a Landsat 5 TM as the pre-event image and a Landsat 5 TM, a EO-1 ALI and a Landsat 8 as post-event images, labeled as changed and unchanged at pixel level, mainly caused by wildfire. [<a href="https://sites.google.com/site/michelevolpiresearch/codes/cross-sensor" target="_blank">Download</a>]</td>
+    </tr>
+	 <tr>
+	    <td>Google data set [<a href="#Ref-23">23</a>]</td>
+	    <td>19 season-varying VHR images pairswith 3 bands of red, green, and blue, a spatial resolution of 0.55 m, and the size ranging from 1006×1168 pixels to 4936×5224 pixels. The image changes include waters, roads, farmland, bare land, forests, buildings, ships, etc. Buildings make up the main changes. acquired during the periods between 2006 and 2019, covering the suburb areas of Guangzhou City, China. [<a href="https://github.com/daifeng2016/Change-Detection-Dataset-for-High-Resolution-Satellite-Imagery" target="_blank">Download</a>]</td>
     </tr>
     <tr>
 	    <td rowspan="1" >Optical RS & SAR</td>
@@ -418,7 +422,7 @@ We provide an overview of the various change detection techniques in the literat
 	    <th>Papers</th>  
 	</tr>
 	<tr>
-	    <td rowspan="9">Urban contexts</td>
+	    <td rowspan="10">Urban contexts</td>
 	    <td rowspan="2">Urban expansion</td>
 	    <td>Satellite images  </td>
         <td><a href="https://dx.doi.org/10.3390/rs10030471" target="_blank">Lyu et.al (2018)</a>, <a href="https://dx.doi.org/10.1080/01431160903475290" target="_blank">Tong et.al (2007)</a></td>
@@ -427,10 +431,15 @@ We provide an overview of the various change detection techniques in the literat
 	    <td>SAR images  </td>
         <td><a href="https://scholar.google.com/scholar_lookup?title=Generating+high-accuracy+urban+distribution+map+for+short-term+change+monitoring+based+on+convolutional+neural+network+by+utilizing+SAR+imagery&author=Iino,+S.&author=Ito,+R.&author=Doi,+K.&author=Imaizumi,+T.&author=Hikosaka,+S.&publication_year=2017" target="_blank">Iino et.al (2017)</a></td>
 	</tr>
-    <tr>
+	<tr>
 	    <td>Public space management</td>
 	    <td>Street view images</td>
         <td><a href="https://scholar.google.com/scholar_lookup?title=ChangeNet:+A+deep+learning+architecture+for+visual+change+detection&conference=Proceedings+of+the+European+Conference+on+Computer+Vision+(ECCV)&author=Varghese,+A.&author=Gubbi,+J.&author=Ramaswamy,+A.&author=Balamuralidhar,+P.&publication_year=2018&pages=129%E2%80%93145" target="_blank">Varghese et.al (2018)</a></td>
+	</tr>
+    <tr>
+	    <td>Road surface</td>
+	    <td>UAV images</td>
+        <td><a href="https://doi.org/10.3390/su12062482" target="_blank">Truong et.al (2020)</a></td>
 	</tr>
     <tr>
 	    <td rowspan="6">Building change detection</td>
@@ -443,7 +452,7 @@ We provide an overview of the various change detection techniques in the literat
 	</tr>
     <tr>
 	    <td>Satellite/Aerial images</td>
-        <td><a href="https://dx.doi.org/10.3390/rs12030484" target="_blank">Jiang  et.al (2020)</a>, <a href="https://dx.doi.org/10.1109/TGRS.2018.2858817" target="_blank">Ji et.al (2018)</a></td>
+        <td><a href="https://dx.doi.org/10.3390/rs12030484" target="_blank">Jiang  et.al (2020)</a>, <a href="https://dx.doi.org/10.1109/TGRS.2018.2858817" target="_blank">Ji et.al (2018)</a>, <a href="https://dx.doi.org/10.1109/TGRS.2020.3000296" target="_blank">Saha et.al (2020)</a></td>
 	</tr>
     <tr>
 	    <td>Airborne laser scanning data and aerial images </td>
@@ -617,6 +626,7 @@ There are currently a large number of software with change detection tools, and 
 
 <span id="Ref-22">[22] L. T. Luppino, F. M. Bianchi, G. Moser and S. N. Anfinsen. Unsupervised Image Regression for Heterogeneous Change Detection. IEEE Transactions on Geoscience and Remote Sensing. 2019, vol. 57, no. 12, pp. 9960-9975. [<a href="https://dx.doi.org/10.1109/TGRS.2019.2930348" target="_blank">CrossRef</a>] </span>
 
+<span id="Ref-23">[23] D. Peng, L. Bruzzone, Y. Zhang, H. Guan, H. Ding and X. Huang, SemiCDNet: A Semisupervised Convolutional Neural Network for Change Detection in High Resolution Remote-Sensing Images. IEEE Transactions on Geoscience and Remote Sensing. 2020. [<a href="https://dx.doi.org/10.1109/TGRS.2020.3011913" target="_blank">CrossRef</a>] </span>
 
 ## Cite
 If you find this review helpful to you, please consider citing our paper. [<a href="https://doi.org/10.3390/rs12101688" target="_blank">Open Access</a>]
