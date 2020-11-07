@@ -24,6 +24,30 @@ Figure 2 provide a general implementation process of AI-based change detection, 
         <th>(Re-)Implementation</th>
 	</tr>
 	<tr>
+	    <td>DSMSCN</td>
+	    <td>CNN; Siamese; Multi-scale; Unsupervised/Supervised; Optical RS</td>
+	    <td> A deeply supervised image fusion network for change detection in high resolution bi-temporal remote sening images, arXiv, 2020.  [<a href="https://arxiv.org/abs/1906.11479" target="_blank">paper</a>], [<a href="https://github.com/I-Hope-Peace/DSMSCN" target="_blank">code, dataset</a>]</td>
+        <td>Tensorflow 1.9</td>
+	</tr>
+	<tr>
+	    <td>SiamCRNN</td>
+	    <td>CNN+RNN; Siamese; Multi-source; Optical RS</td>
+	    <td> Change Detection in Multisource VHR Images via Deep Siamese Convolutional Multiple-Layers Recurrent Neural Network, TGRS, 2020.  [<a href="https://doi.org/10.1109/TGRS.2019.2956756" target="_blank">paper</a>], [<a href="https://github.com/I-Hope-Peace/SiamCRNN" target="_blank">code, dataset</a>]</td>
+        <td>Tensorflow 1.9</td>
+	</tr>
+	<tr>
+	    <td>DSIFN</td>
+	    <td>CNN; Attention Mechanism; Optical RS</td>
+	    <td> A deeply supervised image fusion network for change detection in high resolution bi-temporal remote sening images, ISPRS, 2020.  [<a href="https://doi.org/10.1016/j.isprsjprs.2020.06.003" target="_blank">paper</a>], [<a href="https://github.com/GeoZcx/A-deeply-supervised-image-fusion-network-for-change-detection-in-remote-sensing-images" target="_blank">code, dataset</a>]</td>
+        <td>Pytorch & Keras</td>
+	</tr>
+	<tr>
+	    <td>CEECNet</td>
+	    <td>CNN; Attention Mechanism; Similarity Measure; Optical RS</td>
+	    <td> Looking for change? Roll the Dice and demand Attention, arXiv, 2020.  [<a href="https://arxiv.org/abs/2009.02062" target="_blank">paper</a>], [<a href="https://github.com/feevos/ceecnet" target="_blank">code, dataset</a>]</td>
+        <td>MXNet + Python</td>
+	</tr>
+	<tr>
 	    <td>LamboiseNet</td>
 	    <td>CNN (Light UNet++); Optical RS</td>
 	    <td> Change detection in satellite imagery using deep learning, Master Thesis.  [<a href="https://github.com/hbaudhuin/LamboiseNet" target="_blank">code, dataset, pre-trained model</a>]</td>
@@ -303,7 +327,11 @@ Currently, there are some freely available data sets for change detection, which
 	    <th>Description</th>  
 	</tr>
 	<tr>
-	    <td rowspan="15">Optical RS</td>
+	    <td rowspan="16">Optical RS</td>
+	    <td>SEmantic Change detectiON Dataset (SECOND) [<a href="#Ref-24">24</a>] </td>
+	    <td>a pixel-level annotated semantic change detection dataset, including 4662 pairs of aerial images with 512 x 512 pixels from several platforms and sensors, covering Hangzhou, Chengdu, and Shanghai.  It focus on 6 main land-cover classes, i.e. , non-vegetated ground surface, tree, low vegetation, water, buildings and playgrounds , that are frequently involved in natural and man-made geographical changes. [<a href="http://www.captain-whu.com/PROJECT/SCD/" target="_blank">Download</a>]</td>
+	</tr>
+	<tr>
 	    <td>Hyperspectral change detection dataset [<a href="#Ref-1">1</a>] </td>
 	    <td>3 different hyperspectral scenes acquired by AVIRIS or HYPERION sensor, with 224 or 242 spectral bands, labeled 5 types of changes related with crop transitions at pixel level. [<a href="https://citius.usc.es/investigacion/datasets/hyperspectral-change-detection-dataset" target="_blank">Download</a>]</td>
 	</tr>
@@ -574,8 +602,73 @@ There are currently a large number of software with change detection tools, and 
     </tr>
 <table>
 
+## 6. Review papers for change detection
+The following papers are helpful for researchers to better understand this  field of remote sensing change detection, see table 6.
+<table>
+<caption>Table 6. A list of review papers on change detection.</caption>
+	<tr>
+	    <th>Published year</th>
+	    <th>Review paper</th>
+	</tr>
+    <tr>
+    <td>1989</td>
+    <td>Digital change detection techniques using remotely sensed data, IJRS. [<a href="https://dx.doi.org/10.1080/01431168908903939" target="_blank">paper</a>]</td>
+    </tr>
+	 <tr>
+    <td>2004</td>
+    <td>Digital change detection methods in ecosystem monitoring: a review, IJRS. [<a href="https://dx.doi.org/10.1080/0143116031000101675" target="_blank">paper</a>]</td>
+    </tr>
+	 <tr>
+	 <td>2004</td>
+    <td>Change detection techniques, IJRS. [<a href="https://dx.doi.org/10.1080/0143116031000139863" target="_blank">paper</a>]</td>
+    </tr>
+	 <tr>
+	<td>2012</td>
+    <td>Object-based change detection, IJRS. [<a href="https://dx.doi.org/10.1080/01431161.2011.648285" target="_blank">paper</a>]</td>
+    </tr>
+	 <tr>
+	 <td>2013</td>
+    <td>Change detection from remotely sensed images: From pixel-based to object-based approaches, ISPRS. [<a href="https://doi.org/10.1016/j.isprsjprs.2013.03.006" target="_blank">paper</a>]</td>
+    </tr>
+	<tr>
+	 <td>2016</td>
+    <td>3D change detection–approaches and applications, ISPRS. [<a href="https://doi.org/10.1016/j.isprsjprs.2016.09.013" target="_blank">paper</a>]</td>
+    </tr>
+	<tr>
+	 <td>2016</td>
+    <td>Deep learning for remote sensing data a technical tutorial on the state of the art, MGRS. [<a href="https://dx.doi.org/10.1109/MGRS.2016.2540798" target="_blank">paper</a>]</td>
+    </tr>
+	<tr>
+	 <td>2017</td>
+    <td>Comprehensive survey of deep learning in remote sensing: theories, tools, and challenges for the community, JRS. [<a href="https://doi.org/10.1117/1.JRS.11.042609" target="_blank">paper</a>]</td>
+    </tr>
+	<tr>
+	 <td>2017</td>
+    <td>Deep Learning in Remote Sensing, MGRS. [<a href="https://dx.doi.org/10.1109/MGRS.2017.2762307" target="_blank">paper</a>]</td>
+    </tr>
+	<tr>
+	 <td>2018</td>
+    <td>Computational intelligence in optical remote sensing image processing, ASOC. [<a href="https://doi.org/10.1016/j.asoc.2017.11.045" target="_blank">paper</a>]</td>
+    </tr>
+	<tr>
+	 <td>2019</td>
+    <td>A review of change detection in multitemporal hyperspectral images: current techniques, applications, and challenges, MGRS. [<a href="https://dx.doi.org/10.1109/MGRS.2019.2898520" target="_blank">paper</a>]</td>
+    </tr>
+	<tr>
+	 <td>2019</td>
+    <td>Deep learning in remote sensing applications: A meta-analysis and review, ISPRS. [<a href="https://doi.org/10.1016/j.isprsjprs.2019.04.015" target="_blank">paper</a>]</td>
+    </tr>
+	<tr>
+	 <td>2020</td>
+    <td>Deep Learning for change detection in remote sensing images: comprehensive review and meta-analysis, arXiv. [<a href="https://arxiv.org/abs/2006.05612" target="_blank">paper</a>]</td>
+    </tr>
+	<tr>
+	 <td>2020</td>
+    <td>Change detection based on artificial intelligence: state-of-the-art and challenges, RS. [<a href="https://doi.org/10.3390/rs12101688" target="_blank">paper</a>]</td>
+    </tr>
+<table>
 
-## 6. Reference
+## 7. Reference
 <span id="Ref-1">[1] Hyperspectral Change Detection Dataset. Available online: https://citius.usc.es/investigacion/datasets/hyperspectral-change-detection-dataset (accessed on 4 May 2020).</span>
 
 <span id="Ref-2">[2] Wang, Q.; Yuan, Z.; Du, Q.; Li, X. GETNET: A General End-to-End 2-D CNN Framework for Hyperspectral Image Change Detection. IEEE Trans. Geosci. Remote Sens. 2018, 57, 3–13. [<a href="https://scholar.google.com/scholar_lookup?title=GETNET:+A+General+End-to-End+2-D+CNN+Framework+for+Hyperspectral+Image+Change+Detection&author=Wang,+Q.&author=Yuan,+Z.&author=Du,+Q.&author=Li,+X.&publication_year=2018&journal=IEEE+Trans.+Geosci.+Remote+Sens.&volume=57&pages=3%E2%80%9313&doi=10.1109/TGRS.2018.2849692" target="_blank">Google Scholar</a>] [<a href="https://ieeexplore.ieee.org/document/8418840/" target="_blank">CrossRef</a>]</span>
@@ -621,6 +714,8 @@ There are currently a large number of software with change detection tools, and 
 <span id="Ref-22">[22] L. T. Luppino, F. M. Bianchi, G. Moser and S. N. Anfinsen. Unsupervised Image Regression for Heterogeneous Change Detection. IEEE Transactions on Geoscience and Remote Sensing. 2019, vol. 57, no. 12, pp. 9960-9975. [<a href="https://dx.doi.org/10.1109/TGRS.2019.2930348" target="_blank">CrossRef</a>] </span>
 
 <span id="Ref-23">[23] D. Peng, L. Bruzzone, Y. Zhang, H. Guan, H. Ding and X. Huang, SemiCDNet: A Semisupervised Convolutional Neural Network for Change Detection in High Resolution Remote-Sensing Images. IEEE Transactions on Geoscience and Remote Sensing. 2020. [<a href="https://dx.doi.org/10.1109/TGRS.2020.3011913" target="_blank">CrossRef</a>] </span>
+
+<span id="Ref-24">[24] Yang, Kunping, et al. Asymmetric Siamese Networks for Semantic Change Detection. arXiv preprint arXiv:2010.05687 (2020). [<a href="https://arxiv.org/abs/2010.05687" target="_blank">CrossRef</a>] </span>
 
 ## Cite
 If you find this review helpful to you, please consider citing our paper. [<a href="https://doi.org/10.3390/rs12101688" target="_blank">Open Access</a>]
