@@ -24,6 +24,60 @@ Figure 2 provide a general implementation process of AI-based change detection, 
         <th>(Re-)Implementation</th>
 	</tr>
 	<tr>
+	    <td>SRCDNet</td>
+	    <td>CNN; Siamese; Attention; Super-resolution; Optical RS</td>
+	    <td>Super-resolution-based change detection network with stacked attention module for images with different resolutions, TGRS, 2021.  [<a href="https://doi.org/10.1109/TGRS.2021.3091758" target="_blank">paper</a>], [<a href="https://github.com/liumency/SRCDNet" target="_blank">code, dataset</a>]</td>
+        <td>Pytorch 1.2</td>
+	</tr>
+	<tr>
+	    <td>ESCNet</td>
+	    <td>CNN; Siamese; Superpixel; Optical RS</td>
+	    <td>An End-to-End superpixel-enhanced change detection network for Very-High-Resolution remote sensing images. TNNLS, 2021. [<a href="https://doi.org/10.1109/TNNLS.2021.3089332" target="_blank">paper</a>], [<a href="https://github.com/Bobholamovic/ESCNet" target="_blank">code</a>]</td>
+        <td>Pytorch 1.3</td>
+	</tr>
+	<tr>
+	    <td>KPCAMNet</td>
+	    <td>CNN; Siamese; KPCA; Unsupervised; Optical RS</td>
+	    <td>Unsupervised change detection in multitemporal VHR images based on deep kernel PCA convolutional mapping network,TCYB, 2021. [<a href="https://doi.org/10.1109/TCYB.2021.3086884" target="_blank">paper</a>], [<a href="https://github.com/I-Hope-Peace/KPCAMNet" target="_blank">code</a>]</td>
+        <td>Python</td>
+	</tr>
+	<tr>
+	    <td>SeCo</td>
+	    <td>CNN (ResNet); Transfer Learning; Optical RS</td>
+	    <td>Seasonal contrast: unsupervised pre-training from uncurated remote sensing data, arXiv, 2021.  [<a href="https://arxiv.org/abs/2103.16607" target="_blank">paper</a>], [<a href="https://github.com/ElementAI/seasonal-contrast" target="_blank">code, dataset</a>]</td>
+        <td>Pytorch 1.7</td>
+	</tr>
+	<tr>
+	    <td>CapsNet</td>
+	    <td>Capsule Network(SegCaps); CVA; Siamese; Optical RS</td>
+	    <td>Pseudo-siamese capsule network for aerial remote sensing images change detection, GRSL, 2020.  [<a href="https://doi.org/10.1109/LGRS.2020.3022512" target="_blank">paper 1</a>], Change Capsule Network for Optical Remote Sensing ImageChange Detection, RS, 2021. [<a href="https://doi.org/10.1109/LGRS.2020.3022512" target="_blank">paper 2</a>], [<a href="https://github.com/xuquanfu/capsule_change_detection" target="_blank">code, dataset</a>]</td>
+        <td>Keras</td>
+	</tr>
+	<tr>
+	    <td>BIT_CD</td>
+	    <td>CNN (ResNet18); Siamese; Attention; Transformer; Optical RS</td>
+	    <td>Remote sensing image change detection with transformers, TGRS, 2021.  [<a href="https://doi.org/10.1109/TGRS.2021.3095166" target="_blank">paper</a>], [<a href="https://github.com/justchenhao/BIT_CD" target="_blank">code, dataset, pre-trained model</a>]</td>
+        <td>Pytorch 1.6</td>
+	</tr>
+	<tr>
+	    <td>IAug_CDNet</td>
+	    <td>CNN (GauGAN+UNet); Siamese; GAN; Supervised; Optical RS</td>
+	    <td>Adversarial instance augmentation for building change detection in remote sensing images, TGRS, 2021.  [<a href="https://doi.org/10.1109/TGRS.2021.3066802" target="_blank">paper</a>], [<a href="https://github.com/justchenhao/IAug_CDNet" target="_blank">code, dataset</a>]</td>
+        <td>Pytorch</td>
+	</tr>
+	<tr>
+	    <td>DDNet</td>
+	    <td>CNN; DI+FCM; Unsupervised; SAR</td>
+	    <td>Change detection in synthetic aperture radar images using a dual-domain network, GRSL, 2021.  [<a href="https://doi.org/10.1109/LGRS.2021.3073900" target="_blank">paper</a>], [<a href="https://github.com/summitgao/SAR_CD_DDNet" target="_blank">code, dataset</a>]</td>
+        <td>Pytorch</td>
+	</tr>
+	<tr>
+	    <td>SNUNet-CD</td>
+	    <td>CNN (NestedUNet); Siamese; Attention; Supervised; Optical RS</td>
+	    <td>SNUNet-CD: A densely connected siamese network for change detection of VHR images,  GRSL, 2021.  [<a href="https://doi.org/10.1109/LGRS.2021.3056416" target="_blank">paper</a>], [<a href="https://github.com/likyoo/Siam-NestedUNet" target="_blank">code, dataset, pre-trained model</a>]</td>
+        <td>Pytorch 1.4</td>
+	</tr>
+	<tr>
 	    <td>DSMSCN</td>
 	    <td>CNN; Siamese; Multi-scale; Unsupervised/Supervised; Optical RS</td>
 	    <td> A deeply supervised image fusion network for change detection in high resolution bi-temporal remote sening images, arXiv, 2020.  [<a href="https://arxiv.org/abs/1906.11479" target="_blank">paper</a>], [<a href="https://github.com/I-Hope-Peace/DSMSCN" target="_blank">code, dataset</a>]</td>
@@ -310,6 +364,18 @@ images, 2015. [<a href="https://github.com/fouronnes/SAR-change-detection/blob/m
 	    <td>Unsupervised Change Detection in Satellite Images Using Principal Component Analysis and k-Means Clustering, GRSL, 2009. [<a href="https://dx.doi.org/10.1109/LGRS.2009.2025059" target="_blank">paper</a>]  [<a href="https://github.com/rulixiang/ChangeDetectionPCAKmeans" target="_blank">re-implementation code, dataset</a>] or [<a href="https://github.com/leduckhai/Change-Detection-PCA-KMeans" target="_blank">re-implementation code</a>]</td>
         <td>Matlab</td>
 	</tr>
+	<tr>
+	    <td>PTCD</td>
+	    <td>Tensor; Hyperspectral Optical RS</td>
+	    <td>Three-Order Tucker Decomposition and Reconstruction Detector for Unsupervised Hyperspectral Change Detection. JSTARS, 2021. [<a href="https://dx.doi.org/10.1109/JSTARS.2021.3088438" target="_blank">paper</a>]  [<a href="https://github.com/zephyrhours/Hyperspectral-Change-Detection-PTCD" target="_blank">code, dataset</a>]</td>
+        <td>Matlab</td>
+	</tr>
+		<tr>
+	    <td>GBF-CD</td>
+	    <td>Data Fusion; Graph; EM; KI;</td>
+	    <td>Graph-Based Data Fusion Applied to: Change Detection and Biomass Estimation in Rice Crops. Remote Sensing, 2020 [<a href="https://doi.org/10.3390/rs12172683" target="_blank">paper</a>]  [<a href="https://github.com/DavidJimenezS/GBF-CD" target="_blank">code, dataset</a>]</td>
+        <td>Matlab</td>
+	</tr>
     <tr>
 	    <td colspan="4">Others will be added soon!</td>
     </tr>
@@ -327,7 +393,27 @@ Currently, there are some freely available data sets for change detection, which
 	    <th>Description</th>  
 	</tr>
 	<tr>
-	    <td rowspan="16">Optical RS</td>
+	    <td rowspan="21">Optical RS</td>
+	    <td>DSIFN Dataset [<a href="#Ref-25">25</a>] </td>
+	    <td>6 bi-temporal high resolution images from Google Earth. There are 3600 image pairs with size of 512 × 512 for training, 340 for validation, and 48 for test. [<a href="https://github.com/GeoZcx/A-deeply-supervised-image-fusion-network-for-change-detection-in-remote-sensing-images/tree/master/dataset" target="_blank">Download</a>]</td>
+	</tr>
+	<tr>
+	    <td>S2MTCP [<a href="#Ref-26">26</a>] </td>
+	    <td>1520 Sentinel-2 level 1C image pairs focused on urban areas around the world,  with 10m spatial resolution and the size of 600x600 pixels. Geometric or radiometric corrections are not performed. [<a href="https://zenodo.org/record/4280482#.YQPtXI5LhjV" target="_blank">Download</a>]</td>
+	</tr>
+	<tr>
+	    <td>SYSU-CD [<a href="#Ref-27">27</a>] </td>
+	    <td>20000 pairs of 0.5-m aerial images of size 256×256 taken between the years 2007 and 2014 in Hong Kong, including 6 change types: (a) newly built urban buildings; (b) suburban dilation; (c) groundwork before construction; (d) change of vegetation; (e) road expansion; (f) sea construction. [<a href="https://github.com/liumency/SYSU-CD" target="_blank">Download</a>]</td>
+	</tr>
+	<tr>
+	    <td>S2Looking [<a href="#Ref-28">28</a>] </td>
+	    <td>Building change detection dataset consists of 5000 registered bitemporal image pairs (size of 1024*1024, 0.5 ~ 0.8 m/pixel) of rural areas throughout the world and more than 65,920 annotated change instances, separately indicating the newly built and demolished building [<a href="https://github.com/AnonymousForACMMM/Dataset" target="_blank">Download</a>]</td>
+	</tr>
+	<tr>
+	    <td>Synthetic and real images Dataset [<a href="#Ref-29">29</a>] </td>
+	    <td>The database contains 12,000 triples of synthetic images without object shift, 12,000 triples of model images  with object shift and 16,000 triples of fragments of real remote  sensing  images.  Performed  tests  have  shown  that  the proposed  CNN  is  promising  and  efficient  enough  in  change detection on synthetic and real images [<a href="https://drive.google.com/file/d/1GX656JqqOyBi_Ef0w65kDGVto-nHrNs9" target="_blank">Download</a>]</td>
+	</tr>
+	<tr>
 	    <td>SEmantic Change detectiON Dataset (SECOND) [<a href="#Ref-24">24</a>] </td>
 	    <td>a pixel-level annotated semantic change detection dataset, including 4662 pairs of aerial images with 512 x 512 pixels from several platforms and sensors, covering Hangzhou, Chengdu, and Shanghai.  It focus on 6 main land-cover classes, i.e. , non-vegetated ground surface, tree, low vegetation, water, buildings and playgrounds , that are frequently involved in natural and man-made geographical changes. [<a href="http://www.captain-whu.com/PROJECT/SCD/" target="_blank">Download</a>]</td>
 	</tr>
@@ -391,9 +477,13 @@ Currently, there are some freely available data sets for change detection, which
 	    <td>19 season-varying VHR images pairswith 3 bands of red, green, and blue, a spatial resolution of 0.55 m, and the size ranging from 1006×1168 pixels to 4936×5224 pixels. The image changes include waters, roads, farmland, bare land, forests, buildings, ships, etc. Buildings make up the main changes. acquired during the periods between 2006 and 2019, covering the suburb areas of Guangzhou City, China. [<a href="https://github.com/daifeng2016/Change-Detection-Dataset-for-High-Resolution-Satellite-Imagery" target="_blank">Download</a>]</td>
     </tr>
     <tr>
-	    <td rowspan="1" >Optical RS & SAR</td>
+	    <td rowspan="2" >Optical RS & SAR</td>
 	    <td>California dataset [<a href="#Ref-22">22</a>]</td>
 	    <td> 3 images, including a RS image captured by Landsat 8 with 9 channels on 2017, a SAR image captured by Sentinel-1A (recorded in polarisations VV and VH) after the occurrence of a flood, and a ground truth map. [<a href="https://sites.google.com/view/luppino/data" target="_blank">Download</a>]</td>
+	</tr>
+	 <tr>
+	    <td>Homogeneous CD Dataset [<a href="#Ref-30">30</a>]</td>
+	    <td>6 scenarios:  Scenario  1  with  two  single-polarizationSAR  data  sets;  Scenario  2  with  two  PolSAR  data  sets;  Scenario  3  with  two  optical  image  data  sets.  HeterogeneousCD:  Scenario  4  with  two  SAR/optical  (multispectral)  datasets;  Scenario  5  with  two  multispectral data  sets  of  differentbands  acquired  from  different  sensors;  Scenario  6  with  twoPolSAR/optical  (multispectral)  data  sets.  [<a href="https://github.com/yulisun/INLPG" target="_blank">Download</a>]</td>
 	</tr>
 	<tr>
 	    <td rowspan="3" >Street view</td>
@@ -409,13 +499,18 @@ Currently, there are some freely available data sets for change detection, which
 	    <td>Image sequences of city streets captured by a vehicle-mounted camera at two different time points, with the size of 5000 × 2500 pixels, labeled 3D scene structure changes at pixel level. [<a href="http://www.vision.is.tohoku.ac.jp/us/research/4d_city_modeling/chg_dataset/" target="_blank">Download</a>]</td>
 	</tr>
     	<tr>
-       <td rowspan="3" >CV</td>
+       <td rowspan="4" >CV</td>
 	    <td>CDNet 2012 [<a href="#Ref-18">18</a>] </td>
 	    <td> 6 video categories with 4 to 6 videos sequences in each category, and the groundtruth images contain 5 labels namely: static, hard shadow, outside region of interest, unknown motion (usually around moving objects, due to semi-transparency and motion blur), and motion. [<a href="http://jacarini.dinf.usherbrooke.ca/dataset2012/" target="_blank">Download</a>]</td>
 	</tr>
     	<tr>
 	    <td>CDNet 2014  [<a href="#Ref-19">19</a>,<a href="#Ref-20">20</a>] </td>
 	    <td> 22 additional videos (∼70; 000 pixel-wise annotated frames) spanning 5 new categories that incorporate challenges encountered in many surveillance settings, and provides realistic, camera captured (without CGI), diverse set of indoor and outdoor videos like the CDnet 2012. [<a href="http://www.changedetection.net/" target="_blank">Download</a>]
+        </td>
+	</tr>
+	<tr>
+	    <td>ChangeSim  [<a href="#Ref-31">31</a>] </td>
+	    <td>a challenging dataset aimed at online scene change detection and more, collecting in photo-realistic simulation environments with the presence of environmental non-targeted variations, such as air turbidity and light condition changes, as well as targeted object changes in industrial indoor environments. [<a href="https://github.com/SAMMiCA/ChangeSim" target="_blank">Download</a>]
         </td>
 	</tr>
     <tr>
@@ -717,6 +812,22 @@ The following papers are helpful for researchers to better understand this  fiel
 
 <span id="Ref-24">[24] Yang, Kunping, et al. Asymmetric Siamese Networks for Semantic Change Detection. arXiv preprint arXiv:2010.05687 (2020). [<a href="https://arxiv.org/abs/2010.05687" target="_blank">CrossRef</a>] </span>
 
+<span id="Ref-25">[25] Zhang, C., Yue, P., Tapete, D., Jiang, L., Shangguan, B., Huang, L., & Liu, G. A deeply supervised image fusion network for change detection in high resolution bi-temporal remote sensing images. ISPRS Journal of Photogrammetry and Remote Sensing. 2020. [<a href="https://doi.org/10.1016/j.isprsjprs.2020.06.003" target="_blank">CrossRef</a>] </span>
+
+<span id="Ref-26">[26] LEENSTRA, Marrit, et al. Self-supervised pre-training enhances change detection in Sentinel-2 imagery. arXiv. 2021. [<a href="https://arxiv.org/abs/2101.08122" target="_blank">CrossRef</a>] </span>
+
+<span id="Ref-27">[27] SHI, Qian, et al. A Deeply Supervised Attention Metric-Based Network and an Open Aerial Image Dataset for Remote Sensing Change Detection. IEEE Transactions on Geoscience and Remote Sensing. 2021. [<a href="https://doi.org/10.1109/TGRS.2021.3085870" target="_blank">CrossRef</a>] </span>
+
+<span id="Ref-28">[28] SHEN, Li, et al. S2Looking: A Satellite Side-Looking Dataset for Building Change Detection. arXiv. 2021. [<a href="https://arxiv.org/abs/2107.09244" target="_blank">CrossRef</a>] </span>
+
+<span id="Ref-29">[29] LEBEDEV, M. A., et al. CHANGE DETECTION IN REMOTE SENSING IMAGES USING CONDITIONAL ADVERSARIAL NETWORKS. International Archives of the Photogrammetry, Remote Sensing & Spatial Information Sciences, 2018. [<a href="https://doi.org/10.5194/isprs-archives-XLII-2-565-2018" target="_blank">CrossRef</a>] </span>
+
+<span id="Ref-30">[30] SUN, Yuli, et al. Structure Consistency-Based Graph for Unsupervised Change Detection With Homogeneous and Heterogeneous Remote Sensing Images. IEEE Transactions on Geoscience and Remote Sensing, 2021. [<a href="https://doi.org/10.5194/10.1109/TGRS.2021.3053571" target="_blank">CrossRef</a>] </span>
+
+<span id="Ref-31">[31] PARK, Jin-Man, et al. ChangeSim: Towards End-to-End Online Scene Change Detection in Industrial Indoor Environments. arXiv. 2021. [<a href="https://arxiv.org/abs/2103.05368" target="_blank">CrossRef</a>] </span>
+
+
+
 ## Cite
 If you find this review helpful to you, please consider citing our paper. [<a href="https://doi.org/10.3390/rs12101688" target="_blank">Open Access</a>]
 
@@ -739,6 +850,7 @@ DOI = {10.3390/rs12101688}
 This list will be updated in time, and volunteer contributions are welcome. For questions or sharing, please feel free to [contact us](mailto:007zhangmin@whu.edu.cn) or make issues.
 
 ##### Reference materials:
+* [I-Hope-Peace/ChangeDetectionRepository](https://github.com/I-Hope-Peace/ChangeDetectionRepository)
 * [Michele Volpi personal research page](https://sites.google.com/site/michelevolpiresearch/codes)
 * [llu025/Heterogeneous_CD](https://github.com/llu025/Heterogeneous_CD)
 * [wenhwu/awesome-remote-sensing-change-detection](https://github.com/wenhwu/awesome-remote-sensing-change-detection)
